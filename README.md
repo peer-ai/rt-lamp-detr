@@ -14,7 +14,7 @@ The dataset is under _data folder of this repository. The data is already split 
     
     pip install -r requirements.txt
 
-## Training RT-LAMP-DETR  from scratch
+## Training RT-LAMP-DETR from scratch
 
     ./train_rt_lamp_detr.sh
 
@@ -25,6 +25,15 @@ Please see eval_rt_lamp_detr.ipynb notebook for the code to evaluate RT-LAMP-DET
 ## Our pretrained RT-LAMP-DETR model
 
 Due to the size of the file, our pretrained RT-LAMP-DETR model is only available upon request.
+
+## Using docker
+    
+    git@github.com:peer-ai/rt-lamp-detr.git
+    cd rt-lamp-det
+    docker build . -t rt-lamp-det
+    
+    # train 
+    docker run -v `pwd`:/workspace --gpus 0 -it rt-lamp-detr ./train_rt_lamp_detr.sh
 
 ## Citation
 
