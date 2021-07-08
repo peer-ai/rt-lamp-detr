@@ -12,3 +12,5 @@ RUN pip --no-cache-dir install Cython
 COPY requirements.txt /workspace
 
 RUN pip --no-cache-dir install -r /workspace/requirements.txt
+
+WORKDIR /workspace
