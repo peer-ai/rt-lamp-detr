@@ -20,7 +20,7 @@ The dataset is under _data folder of this repository. The data is already split 
 
 ## Evaluate RT-LAMP-DETR 
 
-Please see eval_rt_lamp_detr.ipynb notebook for the code to evaluate RT-LAMP-DETR based on the trained model.
+Please see [eval_rt_lamp_detr.ipynb](/eval_rt_lamp_detr.ipynb) notebook for the code to evaluate RT-LAMP-DETR based on the trained model.
 
 ## Our pretrained RT-LAMP-DETR model
 
