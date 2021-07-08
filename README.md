@@ -4,6 +4,8 @@ This repository contains the code for RT-LAMP-DETR, an artificial intelligence (
 
 *This repository is based on the original DETR code from https://github.com/facebookresearch/detr*
 
+![RT-LAMP-DETR](/accompanying_image/RT-LAMP-DETR.png)
+
 ## RT-LAMP-DETR dataset
 
 The dataset is under _data folder of this repository. The data is already split into 3 folders for training (train), validation (val) and testing (test).
