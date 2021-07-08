@@ -26,7 +26,7 @@ Please see eval_rt_lamp_detr.ipynb notebook for the code to evaluate RT-LAMP-DET
 
 Due to the size of the file, our pretrained RT-LAMP-DETR model is only available upon request.
 
-## Using docker
+## Using docker (https://www.docker.com/)
     
     git clone git@github.com:peer-ai/rt-lamp-detr.git
     cd rt-lamp-det
