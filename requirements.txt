@@ -8,3 +8,6 @@ onnx
 onnxruntime
 wandb
 imgaug
+seaborn
+opencv-python
+ipywidgets
