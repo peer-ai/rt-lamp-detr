@@ -33,7 +33,7 @@ Due to the size of the file, our pretrained RT-LAMP-DETR model is only available
     docker build . -t rt-lamp-detr
     
     # train 
-    docker run -v `pwd`:/workspace --gpus 0 -it rt-lamp-detr ./train_rt_lamp_detr.sh
+    docker run -v `pwd`:/workspace --gpus 0 --shm-size=2g -it rt-lamp-detr ./train_rt_lamp_detr.sh
 
 ## Citation
 
