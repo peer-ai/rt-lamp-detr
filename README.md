@@ -30,7 +30,7 @@ Due to the size of the file, our pretrained RT-LAMP-DETR model is only available
     
     git@github.com:peer-ai/rt-lamp-detr.git
     cd rt-lamp-det
-    docker build . -t rt-lamp-det
+    docker build . -t rt-lamp-detr
     
     # train 
     docker run -v `pwd`:/workspace --gpus 0 -it rt-lamp-detr ./train_rt_lamp_detr.sh
