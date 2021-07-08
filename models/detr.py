@@ -429,7 +429,10 @@ def build(args):
         # max_obj_id + 1, but the exact value doesn't really matter
         num_classes = 250
     elif args.dataset_file == "LAMP_Covid":
-        num_classes = 3 # covid, ic, neg 
+        # (1) Yellow (COVID-19-RT-LAMP-XO positive)
+        # (2) Green (IC-RT-LAMP-LG positive)  
+        # (3) purple (COVID-19-RT-LAMP-XO negative or IC-RT-LAMP-LG negative)
+        num_classes = 3 
     device = torch.device(args.device)
 
     backbone = build_backbone(args)

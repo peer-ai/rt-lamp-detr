@@ -37,7 +37,6 @@ def get_args_parser():
     parser.add_argument('--clip_max_norm', default=0.1, type=float,
                         help='gradient clipping max norm')
     
-    ## IC
     parser.add_argument('--nonos', action='store_true',
                         help="Non overlapping loss")
 

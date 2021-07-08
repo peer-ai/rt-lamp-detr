@@ -145,19 +145,8 @@ def make_LAMP_Covid_transforms(image_set,use_augment=True,noNormalize=False):
         if use_augment:
             return T.Compose([
                 T.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0),
-                # T.RandomHorizontalFlip(),
                 T.RandomResize([800], max_size=1333),
-#                 T.RandomSelect(
-#                     T.RandomResize(scales, max_size=1333),
-#                     T.Compose([
-#                         T.RandomResize([400, 500, 600]),
-#                         T.RandomSizeCrop(384, 600),
-#                         T.RandomResize(scales, max_size=1333),
-#                     ])
-#                 ),
-#                 T.RandomRotate(p=0.35, possible_angles = [-5,5]),
                 T.RandomAffine(rotate=(-1, 1), translate_percent={"x": (-0.01, 0.01), "y": (-0.01, 0.01)}, scale=(0.99, 1.01), shear=(-1,1)),
-#                 iaa.Affine(rotate=(-5, 5), translate_percent=(-0.1, 0.1), scale=(0.8, 1.5)),
                 normalize,
             ])
         else:

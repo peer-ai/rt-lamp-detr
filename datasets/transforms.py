@@ -72,25 +72,6 @@ def hflip(image, target):
 
     return flipped_image, target
 
-# import imgaug.augmenters as iaa
-
-# def affine(image, target):
-#     transformed_image = F.affine(image)
-
-#     w, h = image.size
-
-#     target = target.copy()
-#     if "boxes" in target:
-#         boxes = target["boxes"]
-#         boxes = boxes[:, [2, 1, 0, 3]] * torch.as_tensor([-1, 1, -1, 1]) + torch.as_tensor([w, 0, w, 0])
-#         target["boxes"] = boxes
-
-#     if "masks" in target:
-#         target['masks'] = target['masks'].flip(-1)
-
-#     return transformed_image, target
-
-
 def resize(image, target, size, max_size=None):
     # size can be min_size (scalar) or (w, h) tuple
 
@@ -208,18 +189,6 @@ class RandomHorizontalFlip(object):
         if random.random() < self.p:
             return hflip(img, target)
         return img, target
-
-# IC: With probability of 0.25, rotate the given image
-# TO FIX: Need to rotate target as well
-# class RandomRotate(object):
-#     def __init__(self, p=0.25, possible_angles = [-180,-90, 90,180]):
-#         self.possible_angles = possible_angles
-#         self.p = p
-    
-#     def __call__(self, img, target):
-#         if random.random() < self.p:            
-#             return F.rotate(img, random.choice(self.possible_angles)), target
-#         return img, target
     
 import imgaug.augmenters as iaa
 from imgaug.augmentables.bbs import BoundingBox, BoundingBoxesOnImage
@@ -228,11 +197,7 @@ import numpy as np
 class RandomAffine(object):
     def __init__(self, **kwargs):
         self.augmentations = iaa.Sequential([
-#             iaa.Sharpen((0.0, 0.1)),
             iaa.Affine( **kwargs),
-#             iaa.AddToBrightness((-60, 40)),
-#             iaa.AddToHue((-10, 10)),
-#             iaa.Fliplr(0.5),
         ])
     
     def __call__(self, img, target):
