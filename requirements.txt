@@ -124,3 +124,4 @@ webencodings==0.5.1
 widgetsnbextension==3.5.1
 zipp==3.5.0
 nms==0.1.6
+jupyterlab
