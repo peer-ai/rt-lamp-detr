@@ -34,6 +34,11 @@ Due to the size of the file, our pretrained RT-LAMP-DETR model is only available
     
     # train 
     docker run -v `pwd`:/workspace --gpus 0 --shm-size=2g -it rt-lamp-detr ./train_rt_lamp_detr.sh
+    
+    # run jupyterlab
+    docker run -v `pwd`:/workspace --gpus 0 --shm-size=2g -p 9001:9001 -it rt-lamp-detr jupyter-lab --allow-root --port 9001 --ip "*"
+    
+Then, please visit this url http://localhost:9001/lab?token=<token> (shown after running jupyter-lab command above) with your browser. This will bring up jupyterlab enviroment for you to run [eval_rt_lamp_detr.ipynb](/eval_rt_lamp_detr.ipynb) notebook to evaluate the trained model.
 
 ## Citation
 
