@@ -29,7 +29,7 @@ Due to the size of the file, our pretrained RT-LAMP-DETR model is only available
 ## Using docker (https://www.docker.com/)
     
     git clone git@github.com:peer-ai/rt-lamp-detr.git
-    cd rt-lamp-det
+    cd rt-lamp-detr
     docker build . -t rt-lamp-detr
     
     # train 
