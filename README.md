@@ -24,7 +24,7 @@ Please see [eval_rt_lamp_detr.ipynb](/eval_rt_lamp_detr.ipynb) notebook for the 
 
 ## Our pretrained RT-LAMP-DETR model
 
-Due to the size of the file, our pretrained RT-LAMP-DETR model is only available upon request.
+You can download our pretrained RT-LAMP-DETR model from [here](https://storage.odin.nai.peer-ai.com/rt-lamp-detr/detr-r50-e632da11.pth). If the link does not work, please file an issue and we will update it.
 
 ## Using docker (https://www.docker.com/)
     
